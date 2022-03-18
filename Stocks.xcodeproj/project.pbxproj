@@ -26,7 +26,6 @@
 		5EAC318A27D0092F00CB5B86 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC318927D0092F00CB5B86 /* Extensions.swift */; };
 		5EAC318C27D01E8C00CB5B86 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC318B27D01E8C00CB5B86 /* SearchResultTableViewCell.swift */; };
 		5EAC318E27D13DD800CB5B86 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC318D27D13DD800CB5B86 /* SearchResponse.swift */; };
-		5EAC319027D15AE400CB5B86 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC318F27D15AE400CB5B86 /* PanelViewController.swift */; };
 		5ED5947A27DBED7F006A8890 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5947927DBED7F006A8890 /* WatchListTableViewCell.swift */; };
 		5ED5947C27DBEFCC006A8890 /* StockChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5947B27DBEFCC006A8890 /* StockChartView.swift */; };
 		5ED5947E27E3B3AF006A8890 /* FinancialMetricsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5947D27E3B3AF006A8890 /* FinancialMetricsResponse.swift */; };
@@ -56,7 +55,6 @@
 		5EAC318927D0092F00CB5B86 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5EAC318B27D01E8C00CB5B86 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		5EAC318D27D13DD800CB5B86 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
-		5EAC318F27D15AE400CB5B86 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		5ED5947927DBED7F006A8890 /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 		5ED5947B27DBEFCC006A8890 /* StockChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartView.swift; sourceTree = "<group>"; };
 		5ED5947D27E3B3AF006A8890 /* FinancialMetricsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialMetricsResponse.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				5E1B9CC727CFD5B500721261 /* NewsViewController.swift */,
 				5E1B9CC927CFD5D100721261 /* SearchResultsViewController.swift */,
 				5E04D0D427CFD8FE005DB89A /* StockDetailsViewController.swift */,
-				5EAC318F27D15AE400CB5B86 /* PanelViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,7 +313,6 @@
 				5EAC318E27D13DD800CB5B86 /* SearchResponse.swift in Sources */,
 				5E1B9CB127CFD3FC00721261 /* SceneDelegate.swift in Sources */,
 				5E1B9CCA27CFD5D100721261 /* SearchResultsViewController.swift in Sources */,
-				5EAC319027D15AE400CB5B86 /* PanelViewController.swift in Sources */,
 				5ED5947A27DBED7F006A8890 /* WatchListTableViewCell.swift in Sources */,
 				5E5A82CA27DA612A006D9E80 /* MarketDataResponse.swift in Sources */,
 				5EAC318627CFDDA700CB5B86 /* PersistanceManager.swift in Sources */,

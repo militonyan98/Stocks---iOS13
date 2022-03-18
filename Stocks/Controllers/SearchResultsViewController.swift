@@ -7,17 +7,23 @@
 
 import UIKit
 
+/// Delegate for search results
 protocol SearchResultsViewControllerDelegate: AnyObject {
+    /// Notifies delegate of selection
+    /// - Parameter searchResult: Result that was picked
     func searchResultsViewControllerDidSelect(searchResult: SearchResult)
 }
 
 
-class SearchResultsViewController: UIViewController {
-    
+/// VC to show search results
+final class SearchResultsViewController: UIViewController {
+    /// Delegate to get events
     weak var delegate: SearchResultsViewControllerDelegate?
     
+    /// Collection of results
     private var results: [SearchResult] = []
     
+    /// Primary view
     private let tableView: UITableView = {
         let table = UITableView()
         //regiter a cell
@@ -28,6 +34,9 @@ class SearchResultsViewController: UIViewController {
         return table
     }()
 
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -41,6 +50,9 @@ class SearchResultsViewController: UIViewController {
     }
 
     
+    // MARK: - Private
+    
+    /// Sets up table view
     private func setUpTable() {
         view.addSubview(tableView)
         tableView.delegate = self
@@ -48,6 +60,10 @@ class SearchResultsViewController: UIViewController {
     }
     
     
+    // MARK: - Public
+    
+    /// Updates results on VC
+    /// - Parameter results: Collection of news results
     public func update(with results: [SearchResult]) {
         self.results = results
         tableView.isHidden = results.isEmpty
@@ -55,6 +71,8 @@ class SearchResultsViewController: UIViewController {
     }
 }
 
+
+// MARK: - TableView
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
     

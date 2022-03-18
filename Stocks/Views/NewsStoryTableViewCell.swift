@@ -7,12 +7,15 @@
 import SDWebImage
 import UIKit
 
-class NewsStoryTableViewCell: UITableViewCell {
-    
+/// News story table view cell
+final class NewsStoryTableViewCell: UITableViewCell {
+    /// Cell id
     static let identifier = "NewsStoryTableViewCell"
     
+    /// Ideal height of cell
     static let preferredHeight: CGFloat = 140
     
+    /// Cell view model
     struct ViewModel {
         let source: String
         let headline: String
@@ -27,14 +30,14 @@ class NewsStoryTableViewCell: UITableViewCell {
         }
     }
     
-    //source
+    /// Source label
     private let sourceLable: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .medium)
         return label
     }()
     
-    //headline
+    /// Headline label
     private let headlineLable: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 22, weight: .regular)
@@ -42,7 +45,7 @@ class NewsStoryTableViewCell: UITableViewCell {
         return label
     }()
     
-    //date
+    /// Date label
     private let dateLable: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
@@ -50,7 +53,7 @@ class NewsStoryTableViewCell: UITableViewCell {
         return label
     }()
     
-    //image
+    /// Image for story
     private let storyImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .tertiarySystemBackground
@@ -60,6 +63,9 @@ class NewsStoryTableViewCell: UITableViewCell {
         imageView.layer.masksToBounds = true
         return imageView
     }()
+    
+    
+    // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -78,15 +84,15 @@ class NewsStoryTableViewCell: UITableViewCell {
         let imageSize: CGFloat = contentView.height / 1.4
         storyImageView.frame = CGRect(x: contentView.width-imageSize - 10, y: (contentView.height - imageSize) / 2, width: imageSize, height: imageSize)
         
-        //label layout
+        // Label layout
         let availableWidth: CGFloat = contentView.width - separatorInset.left - imageSize - 15
         dateLable.frame = CGRect(x: separatorInset.left, y: contentView.height - 40, width: availableWidth, height: 40)
         
-        //source label
+        // Source label
         sourceLable.sizeToFit()
         sourceLable.frame = CGRect(x: separatorInset.left, y: 4, width: availableWidth, height: sourceLable.height)
         
-        //headline label
+        // Headline label
         headlineLable.frame = CGRect(x: separatorInset.left, y: sourceLable.bottom + 5, width: availableWidth, height: contentView.height - sourceLable.bottom - dateLable.height - 10)
     }
     
@@ -98,12 +104,14 @@ class NewsStoryTableViewCell: UITableViewCell {
         storyImageView.image = nil
     }
     
+    /// Configure view
+    /// - Parameter viewModel: View ViewModel
     public func configure(with viewModel: ViewModel) {
         headlineLable.text = viewModel.headline
         sourceLable.text = viewModel.source
         dateLable.text = viewModel.dateString
         storyImageView.sd_setImage(with: viewModel.imageURL, completed: nil)
-        //manually set image
-        //storyImageView.setImage(with: viewModel.imageURL)
+        // Manually set image
+        // storyImageView.setImage(with: viewModel.imageURL)
     }
 }
